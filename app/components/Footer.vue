@@ -1,9 +1,8 @@
 <script setup lang="ts">
 const socialLinks = [
-  { icon: 'i-simple-icons-github', to: 'https://github.com', label: 'GitHub' },
-  { icon: 'i-simple-icons-linkedin', to: 'https://linkedin.com', label: 'LinkedIn' },
-  { icon: 'i-simple-icons-twitter', to: 'https://twitter.com', label: 'Twitter' },
-  { icon: 'i-heroicons-envelope', to: 'mailto:contact@example.com', label: 'Email' }
+  { icon: 'i-simple-icons-github', to: 'https://github.com/ans1', label: 'GitHub' },
+  { icon: 'i-simple-icons-linkedin', to: 'https://linkedin.com/in/muhammadans', label: 'LinkedIn' },
+  { icon: 'i-heroicons-envelope', to: 'mailto:ans2003@gmail.com', label: 'Email' }
 ]
 
 const links = [
@@ -21,7 +20,7 @@ const links = [
       <div v-reveal="{ y: 8, delay: 120 }" class="grid md:grid-cols-3 gap-8 items-center">
         <div class="text-center md:text-left">
           <NuxtLink to="/" class="text-xl font-bold font-mono mb-2 inline-block">
-            &lt;Dev /&gt;
+            &lt;M.Ans /&gt;
           </NuxtLink>
           <p class="text-sm text-gray-500 dark:text-gray-400">
             &copy; {{ new Date().getFullYear() }} Muhammad. All rights reserved.

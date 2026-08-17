@@ -1,3 +1,15 @@
+<script setup lang="ts">
+useHead({
+  title: 'Muhammad Ans — Full-Stack Developer (Laravel | Nuxt | Vue.js)',
+  meta: [
+    {
+      name: 'description',
+      content: 'Full-stack developer with 6+ years of experience building Laravel back-ends and modern Nuxt.js/Vue.js front-ends. Portfolio, experience, and featured projects.'
+    }
+  ]
+})
+</script>
+
 <template>
   <div class="page-index min-h-screen flex flex-col">
     <Header class="header-section w-full" />
