@@ -43,22 +43,22 @@ const socialLinks = [
             v-for="method in contactMethods"
             :key="method.label"
             :ui="{ body: { padding: 'p-6' } }"
-            class="text-center"
+            class="text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
           >
             <div class="flex flex-col items-center gap-3">
-              <div class="p-3 bg-primary-100 dark:bg-primary-900/30 rounded-full text-primary-500">
+              <div class="flex items-center justify-center w-14 h-14 rounded-full bg-primary-500/10 text-primary-500">
                 <UIcon :name="method.icon" class="w-6 h-6" />
               </div>
               <div>
-                <div class="text-sm text-gray-500">{{ method.label }}</div>
+                <div class="text-sm text-gray-500 dark:text-gray-400 mb-0.5">{{ method.label }}</div>
                 <a
                   v-if="method.href"
                   :href="method.href"
-                  class="font-medium hover:text-primary-500 break-all"
+                  class="font-semibold hover:text-primary-500 transition-colors break-all"
                 >
                   {{ method.value }}
                 </a>
-                <div v-else class="font-medium">{{ method.value }}</div>
+                <div v-else class="font-semibold">{{ method.value }}</div>
               </div>
             </div>
           </UCard>
@@ -74,7 +74,7 @@ const socialLinks = [
             Email Me
           </UButton>
 
-          <div class="flex items-center gap-2">
+          <div class="flex items-center gap-3">
             <UButton
               v-for="social in socialLinks"
               :key="social.label"
@@ -82,9 +82,8 @@ const socialLinks = [
               :to="social.to"
               target="_blank"
               variant="soft"
-              color="gray"
               size="lg"
-              class="rounded-full"
+              class="rounded-full hover:-translate-y-0.5 transition-transform"
               :aria-label="social.label"
             />
           </div>

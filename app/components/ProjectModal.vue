@@ -63,15 +63,15 @@ watch(() => props.project, async (project) => {
 </script>
 
 <template>
-  <UModal v-model:open="open" :ui="{ content: 'sm:max-w-3xl' }">
+  <UModal v-model:open="open" :ui="{ content: 'w-[95vw] sm:max-w-2xl lg:max-w-4xl xl:max-w-5xl max-h-[90vh]' }">
     <template #content>
-      <div v-if="project">
-        <div class="relative bg-gray-100 dark:bg-gray-800 rounded-t-lg overflow-hidden">
+      <div v-if="project" class="max-h-[90vh] overflow-y-auto">
+        <!-- Gallery header — only rendered when images are actually provided -->
+        <div v-if="project.images?.length" class="relative bg-gray-100 dark:bg-gray-800 rounded-t-lg overflow-hidden">
           <ClientOnly>
             <swiper-container
-              v-if="project.images?.length"
               ref="galleryRef"
-              class="w-full aspect-video"
+              class="w-full aspect-[16/10] sm:aspect-[16/9]"
               slides-per-view="1"
               grab-cursor="true"
             >
@@ -79,7 +79,7 @@ watch(() => props.project, async (project) => {
                 <img
                   :src="img"
                   :alt="`${project.title} screenshot ${i + 1}`"
-                  class="w-full h-full object-cover"
+                  class="w-full h-full object-contain bg-gray-200 dark:bg-gray-900"
                 >
               </swiper-slide>
             </swiper-container>
@@ -87,10 +87,9 @@ watch(() => props.project, async (project) => {
               <div class="w-full aspect-video" :class="project.image" />
             </template>
           </ClientOnly>
-          <div v-if="!project.images?.length" class="w-full aspect-video" :class="project.image" />
 
           <!-- Explicit prev/next controls -->
-          <template v-if="project.images && project.images.length > 1">
+          <template v-if="project.images.length > 1">
             <UButton
               icon="i-heroicons-chevron-left"
               size="md"
@@ -119,7 +118,19 @@ watch(() => props.project, async (project) => {
           />
         </div>
 
-        <div class="p-6">
+        <!-- No-gallery header — just a close button, no image/placeholder banner -->
+        <div v-else class="flex justify-end p-3">
+          <UButton
+            icon="i-heroicons-x-mark"
+            size="sm"
+            variant="soft"
+            color="gray"
+            class="rounded-full"
+            @click="open = false"
+          />
+        </div>
+
+        <div class="p-6" :class="project.images?.length ? '' : 'pt-0'">
           <h3 class="text-2xl font-bold mb-3">{{ project.title }}</h3>
 
           <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">

@@ -29,14 +29,17 @@ const isDark = computed({
         </NuxtLink>
       </div>
 
-      <nav class="hidden md:flex items-center gap-4">
+      <nav class="hidden md:flex items-center gap-2">
         <UButton
           v-for="link in links"
           :key="link.label"
           :to="link.to"
-          variant="ghost"
-          color="gray"
-          class="rounded-full"
+          :variant="link.label === 'Projects' ? 'soft' : 'ghost'"
+          :color="link.label === 'Projects' ? 'primary' : 'gray'"
+          :class="[
+            'rounded-full',
+            link.label === 'Projects' ? 'font-semibold' : ''
+          ]"
         >
           {{ link.label }}
         </UButton>

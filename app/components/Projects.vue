@@ -69,12 +69,10 @@ function openProject(project: (typeof projects)[number]) {
           v-reveal="{ y: 18, delay: 100 + index * 80 }"
         >
           <UCard :ui="{ body: { padding: 'p-0 sm:p-0' } }" class="overflow-hidden group h-full">
-            <component
-              :is="project.images.length ? 'button' : 'div'"
-              :type="project.images.length ? 'button' : undefined"
-              class="relative block w-full h-48 overflow-hidden"
-              :class="project.images.length ? 'cursor-pointer' : ''"
-              @click="project.images.length ? openProject(project) : null"
+            <button
+              type="button"
+              class="relative block w-full h-48 overflow-hidden cursor-pointer"
+              @click="openProject(project)"
             >
               <img
                 v-if="project.images.length"
@@ -97,7 +95,7 @@ function openProject(project: (typeof projects)[number]) {
                 <UIcon name="i-heroicons-lock-closed" class="w-3.5 h-3.5 mr-1" />
                 In Production
               </UBadge>
-            </component>
+            </button>
 
             <div class="p-6 flex flex-col h-full">
               <h3 class="text-xl font-bold mb-2">{{ project.title }}</h3>
@@ -119,14 +117,13 @@ function openProject(project: (typeof projects)[number]) {
 
               <div class="flex items-center gap-3 mt-auto">
                 <UButton
-                  v-if="project.images.length"
-                  icon="i-heroicons-photo"
+                  :icon="project.images.length ? 'i-heroicons-photo' : 'i-heroicons-document-text'"
                   size="sm"
                   variant="soft"
                   class="rounded-full"
                   @click="openProject(project)"
                 >
-                  View Gallery
+                  {{ project.images.length ? 'View Gallery' : 'View Details' }}
                 </UButton>
                 <UButton
                   v-if="project.links.demo"
