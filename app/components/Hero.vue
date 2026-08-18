@@ -13,9 +13,14 @@ const resumeUrl = '/resume/muhammad-ans-resume.pdf'
     <UContainer>
       <div class="flex flex-col md:flex-row items-center gap-12">
         <div v-reveal="{ y: 16, delay: 80, duration: 800 }" class="flex-1 text-center md:text-left space-y-6">
-          <UBadge variant="subtle" size="lg" class="rounded-full mb-4">
-            Available for hire
-          </UBadge>
+          <div class="flex flex-wrap items-center justify-center md:justify-start gap-2 mb-4">
+            <UBadge variant="subtle" size="lg" class="rounded-full">
+              Available for hire
+            </UBadge>
+            <UBadge variant="soft" color="primary" size="lg" icon="i-heroicons-sparkles" class="rounded-full">
+              1+ yr Vibe Coding
+            </UBadge>
+          </div>
           
           <h1 class="text-5xl md:text-6xl font-bold tracking-tight text-gray-900 dark:text-white">
             Hi, I'm <span class="text-primary-500">Muhammad</span>

@@ -6,15 +6,16 @@ const asset = (path: string) => `${base}${path}`
 const projects = [
   {
     title: 'Safareva',
-    description: 'A multi-vertical travel package marketplace where agencies list packages and travellers browse and enquire. Built the full stack — Laravel REST API, admin panel, and a Nuxt 4/Nuxt UI v4 front-end — architected around dynamic service types (Pilgrimage, Holidays, and more), each with its own theme and navigation, with an AI-assisted package builder.',
-    tags: ['Laravel', 'Nuxt 4', 'Nuxt UI v4', 'Pinia', 'AI Integration'],
+    description: 'A multi-vertical travel package marketplace where agencies list packages and travellers browse and enquire. Built the full stack — Laravel REST API, admin panel, and a Nuxt 4/Nuxt UI v4 front-end — architected around dynamic service types (Pilgrimage, Holidays, and more), each with its own theme and navigation, with an AI-assisted package builder. Owned this one solo end-to-end: researched the market, designed the entire UX/UI myself, and built it using AI-assisted "vibe coding" alongside hands-on engineering — no dedicated designer involved.',
+    tags: ['Laravel', 'Nuxt 4', 'Nuxt UI v4', 'Pinia', 'AI Integration', 'Vibe Coding'],
     image: 'bg-gradient-to-br from-blue-500 to-cyan-500',
     images: [
       asset('/images/projects/safareva/01-homepage.png'),
       asset('/images/projects/safareva/02-homepage-holidays.png'),
       asset('/images/projects/safareva/03-listing-holidays.png'),
       asset('/images/projects/safareva/04-packages-menu.jpg'),
-      asset('/images/projects/safareva/05-agencies.png')
+      asset('/images/projects/safareva/05-agencies.png'),
+      asset('/images/projects/safareva/06-prefrencies.png')
     ],
     liveRestricted: true,
     links: { demo: '', repo: '' }
