@@ -47,6 +47,7 @@ const links = [
             target="_blank"
             variant="ghost"
             color="gray"
+            class="rounded-full"
             :aria-label="social.label"
           />
         </div>

@@ -7,6 +7,8 @@ const links = [
   { label: 'Contact', to: '/#contact' }
 ]
 
+const resumeUrl = '/resume/muhammad-ans-resume.pdf'
+
 const colorMode = useColorMode()
 const isDark = computed({
   get () {
@@ -34,17 +36,29 @@ const isDark = computed({
           :to="link.to"
           variant="ghost"
           color="gray"
+          class="rounded-full"
         >
           {{ link.label }}
         </UButton>
       </nav>
 
       <div class="flex items-center gap-2">
+        <UButton
+          :to="resumeUrl"
+          target="_blank"
+          icon="i-heroicons-arrow-down-tray"
+          size="sm"
+          class="rounded-full hidden sm:inline-flex"
+        >
+          Resume
+        </UButton>
+
         <ClientOnly>
           <UButton
             :icon="isDark ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid'"
             color="gray"
             variant="ghost"
+            class="rounded-full"
             aria-label="Theme"
             @click="isDark = !isDark"
           />

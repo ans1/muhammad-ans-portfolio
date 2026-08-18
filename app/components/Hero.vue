@@ -4,6 +4,8 @@ const socialLinks = [
   { icon: 'i-simple-icons-linkedin', to: 'https://linkedin.com/in/muhammadans', label: 'LinkedIn' },
   { icon: 'i-heroicons-envelope', to: 'mailto:ans2003@gmail.com', label: 'Email' }
 ]
+
+const resumeUrl = '/resume/muhammad-ans-resume.pdf'
 </script>
 
 <template>
@@ -29,21 +31,35 @@ const socialLinks = [
           </p>
 
           <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-4">
-            <UButton 
-              size="xl" 
+            <UButton
+              size="xl"
               to="#projects"
               icon="i-heroicons-briefcase"
+              class="rounded-full"
             >
               View Projects
             </UButton>
-            
-            <UButton 
-              size="xl" 
-              variant="soft" 
+
+            <UButton
+              size="xl"
+              variant="soft"
               to="#contact"
               icon="i-heroicons-chat-bubble-bottom-center-text"
+              class="rounded-full"
             >
               Contact Me
+            </UButton>
+
+            <UButton
+              size="xl"
+              variant="outline"
+              color="gray"
+              :to="resumeUrl"
+              target="_blank"
+              icon="i-heroicons-arrow-down-tray"
+              class="rounded-full"
+            >
+              Resume
             </UButton>
           </div>
 
@@ -57,6 +73,7 @@ const socialLinks = [
               variant="ghost"
               color="gray"
               size="lg"
+              class="rounded-full"
               :aria-label="social.label"
             />
           </div>

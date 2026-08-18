@@ -55,7 +55,7 @@ const skillCategories = [
               :key="skill"
               color="gray"
               variant="solid"
-              class="px-3 py-1"
+              class="px-3 py-1 rounded-full"
             >
               {{ skill }}
             </UBadge>

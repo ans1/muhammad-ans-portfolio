@@ -64,18 +64,19 @@ const experiences = [
                   <div class="text-sm font-semibold mt-1">{{ exp.date }}</div>
                 </div>
                 <div class="mt-4 md:mt-0">
-                  <UBadge color="gray" variant="soft">{{ exp.title }}</UBadge>
+                  <UBadge color="gray" variant="soft" class="rounded-full">{{ exp.title }}</UBadge>
                 </div>
               </div>
-              
+
               <div class="p-6 md:w-2/3">
                 <p class="text-gray-600 dark:text-gray-300 mb-4">{{ exp.description }}</p>
                 <div class="flex flex-wrap gap-2">
-                  <UBadge 
-                    v-for="tech in exp.technologies" 
+                  <UBadge
+                    v-for="tech in exp.technologies"
                     :key="tech"
                     size="xs"
                     variant="subtle"
+                    class="rounded-full"
                   >
                     {{ tech }}
                   </UBadge>
