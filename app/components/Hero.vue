@@ -31,8 +31,10 @@ const resumeUrl = '/resume/muhammad-ans-resume.pdf'
           <p class="text-xl text-gray-500 dark:text-gray-400 max-w-2xl leading-relaxed">
             I build production web applications — 10+ years across
             <span class="text-gray-900 dark:text-gray-200 font-semibold">Laravel</span>,
-            <span class="text-gray-900 dark:text-gray-200 font-semibold">Nuxt</span>
-            and modern web tooling — and I ship
+            <span class="text-gray-900 dark:text-gray-200 font-semibold">Nuxt</span>,
+            <span class="text-gray-900 dark:text-gray-200 font-semibold">Vue 3</span>
+            and <span class="text-gray-900 dark:text-gray-200 font-semibold">React</span>
+            — and I ship
             <span class="text-gray-900 dark:text-gray-200 font-semibold">production AI features</span>:
             natural-language search, structured extraction and embedding-backed retrieval.
           </p>
@@ -116,10 +118,10 @@ const resumeUrl = '/resume/muhammad-ans-resume.pdf'
                   </div>
                   <div class="pl-4">
                     <span class="text-gray-400">stack:</span>
-                    <span class="text-gray-400">[</span>
-                    <span class="text-green-500">'Laravel'</span>,
-                    <span class="text-green-500">'Nuxt'</span>
-                    <span class="text-gray-400">]</span>,
+                    <span class="text-gray-400">[</span><span class="text-green-500">'Laravel'</span><span class="text-gray-400">,</span>
+                    <span class="text-green-500">'Nuxt'</span><span class="text-gray-400">,</span>
+                    <span class="text-green-500">'Vue 3'</span><span class="text-gray-400">,</span>
+                    <span class="text-green-500">'React'</span><span class="text-gray-400">],</span>
                   </div>
                   <div class="pl-4">
                     <span class="text-gray-400">ai:</span>
