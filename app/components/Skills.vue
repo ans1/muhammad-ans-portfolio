@@ -5,7 +5,8 @@ const skillCategories = [
     icon: 'i-heroicons-computer-desktop',
     skills: [
       { name: 'Nuxt 4', icon: 'i-simple-icons-nuxtdotjs', color: '#00DC82' },
-      { name: 'Vue.js', icon: 'i-simple-icons-vuedotjs', color: '#4FC08D' },
+      { name: 'Vue 3', icon: 'i-simple-icons-vuedotjs', color: '#4FC08D' },
+      { name: 'React', icon: 'i-simple-icons-react', color: '#61DAFB' },
       { name: 'Nuxt UI v4', icon: 'i-simple-icons-nuxtdotjs', color: '#00DC82' },
       { name: 'Pinia', icon: 'i-heroicons-cube', color: '#FFD859' },
       { name: 'Tailwind CSS', icon: 'i-simple-icons-tailwindcss', color: '#38BDF8' },

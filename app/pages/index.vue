@@ -1,10 +1,10 @@
 <script setup lang="ts">
 useHead({
-  title: 'Muhammad Ans — Full-Stack Developer (Laravel | Nuxt | Vue.js)',
+  title: 'Muhammad Ans — Full-Stack Developer (Laravel | Nuxt | Vue 3 | React)',
   meta: [
     {
       name: 'description',
-      content: 'Full-stack developer with 10+ years of experience building Laravel back-ends and modern Nuxt.js/Vue.js front-ends. Portfolio, experience, and featured projects.'
+      content: 'Full-stack developer with 10+ years of experience building Laravel back-ends and modern Nuxt, Vue 3 and React front-ends. Portfolio, experience, and featured projects.'
     }
   ]
 })
