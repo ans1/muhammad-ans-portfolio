@@ -4,7 +4,7 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: 'Full-stack developer with 6+ years of experience building Laravel back-ends and modern Nuxt.js/Vue.js front-ends. Portfolio, experience, and featured projects.'
+      content: 'Full-stack developer with 10+ years of experience building Laravel back-ends and modern Nuxt.js/Vue.js front-ends. Portfolio, experience, and featured projects.'
     }
   ]
 })

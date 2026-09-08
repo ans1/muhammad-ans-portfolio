@@ -1,10 +1,13 @@
 <script setup lang="ts">
 interface Project {
   title: string
+  role?: string
+  period?: string
   description: string
   tags: string[]
   image: string
   images?: string[]
+  captions?: string[]
   liveRestricted?: boolean
   links: { demo: string; repo: string }
 }
@@ -20,6 +23,8 @@ const activeIndex = ref(0)
 const slideCount = computed(() => props.project?.images?.length ?? 0)
 const isBeginning = computed(() => activeIndex.value <= 0)
 const isEnd = computed(() => activeIndex.value >= slideCount.value - 1)
+
+const activeCaption = computed(() => props.project?.captions?.[activeIndex.value] || '')
 
 function onSlideChange() {
   const swiper = galleryRef.value?.swiper
@@ -118,6 +123,14 @@ watch(() => props.project, async (project) => {
           />
         </div>
 
+        <div
+          v-if="project.images?.length && activeCaption"
+          class="px-6 pt-4 pb-1 flex items-start gap-2 text-sm text-gray-600 dark:text-gray-300"
+        >
+          <UIcon name="i-heroicons-sparkles" class="w-4 h-4 mt-0.5 shrink-0 text-primary-500" />
+          <span>{{ activeCaption }}</span>
+        </div>
+
         <!-- No-gallery header — just a close button, no image/placeholder banner -->
         <div v-else class="flex justify-end p-3">
           <UButton
@@ -131,7 +144,13 @@ watch(() => props.project, async (project) => {
         </div>
 
         <div class="p-6" :class="project.images?.length ? '' : 'pt-0'">
-          <h3 class="text-2xl font-bold mb-3">{{ project.title }}</h3>
+          <h3 class="text-2xl font-bold mb-1">{{ project.title }}</h3>
+
+          <div v-if="project.role || project.period" class="flex flex-wrap items-center gap-x-2 gap-y-1 mb-4 text-sm">
+            <span v-if="project.role" class="font-medium text-primary-500">{{ project.role }}</span>
+            <span v-if="project.role && project.period" class="text-gray-300 dark:text-gray-600">·</span>
+            <span v-if="project.period" class="text-gray-500 dark:text-gray-400">{{ project.period }}</span>
+          </div>
 
           <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
             {{ project.description }}
@@ -145,7 +164,7 @@ watch(() => props.project, async (project) => {
 
           <div v-if="project.liveRestricted" class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-4">
             <UIcon name="i-heroicons-lock-closed" class="w-4 h-4 shrink-0" />
-            This project is live in production and not publicly viewable — screenshots shown above.
+            Private client system — not publicly accessible. Happy to walk through the architecture and code in an interview.
           </div>
 
           <div class="flex items-center gap-3">

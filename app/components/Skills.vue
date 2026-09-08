@@ -11,7 +11,9 @@ const skillCategories = [
       { name: 'Tailwind CSS', icon: 'i-simple-icons-tailwindcss', color: '#38BDF8' },
       { name: 'SCSS', icon: 'i-simple-icons-sass', color: '#CC6699' },
       { name: 'HTML5', icon: 'i-simple-icons-html5', color: '#E34F26' },
-      { name: 'JavaScript (ES6+)', icon: 'i-simple-icons-javascript', color: '#F7DF1E' }
+      { name: 'JavaScript (ES6+)', icon: 'i-simple-icons-javascript', color: '#F7DF1E' },
+      { name: 'Inertia.js', icon: 'i-heroicons-bolt', color: '#9553E9' },
+      { name: 'OpenLayers', icon: 'i-heroicons-map', color: '#1F6B75' }
     ]
   },
   {
@@ -29,26 +31,32 @@ const skillCategories = [
     ]
   },
   {
-    title: 'AI Workflow',
+    title: 'AI Engineering',
     icon: 'i-heroicons-sparkles',
     skills: [
-      { name: 'AI-Assisted "Vibe Coding" (1+ yr)', icon: 'i-heroicons-sparkles', color: '#A78BFA' },
-      { name: 'Independent Product Design & R&D', icon: 'i-heroicons-light-bulb', color: '#F59E0B' },
-      { name: 'Claude', icon: 'i-simple-icons-anthropic', color: '#D97757' },
-      { name: 'Cursor', icon: 'i-heroicons-cursor-arrow-rays', color: '#60A5FA' }
+      { name: 'Laravel AI SDK', icon: 'i-simple-icons-laravel', color: '#FF2D20' },
+      { name: 'Gemini', icon: 'i-heroicons-sparkles', color: '#4285F4' },
+      { name: 'Groq', icon: 'i-heroicons-bolt', color: '#F55036' },
+      { name: 'Structured / JSON-Schema Output', icon: 'i-heroicons-code-bracket-square', color: '#38BDF8' },
+      { name: 'Embeddings & pgvector Search', icon: 'i-heroicons-magnifying-glass-circle', color: '#10B981' },
+      { name: 'Prompt Design & Injection Hardening', icon: 'i-heroicons-shield-check', color: '#A78BFA' },
+      { name: 'AI Cost Control & Failover', icon: 'i-heroicons-currency-dollar', color: '#F59E0B' },
+      { name: 'AI-Assisted Development', icon: 'i-heroicons-cpu-chip', color: '#D97757' }
     ]
   },
   {
-    title: 'Tools & Workflow',
-    icon: 'i-heroicons-command-line',
+    title: 'DevOps & Deployment',
+    icon: 'i-heroicons-server-stack',
     skills: [
-      { name: 'Git', icon: 'i-simple-icons-git', color: '#F05032' },
-      { name: 'GitHub', icon: 'i-simple-icons-github', color: '#F0F6FC' },
+      { name: 'Linux / Ubuntu VPS', icon: 'i-simple-icons-ubuntu', color: '#E95420' },
+      { name: 'Apache & PHP-FPM', icon: 'i-simple-icons-apache', color: '#D22128' },
+      { name: 'Nginx', icon: 'i-simple-icons-nginx', color: '#009639' },
+      { name: 'PM2 (Nuxt SSR)', icon: 'i-heroicons-cpu-chip', color: '#2B037A' },
+      { name: 'Zero-Downtime Deploys', icon: 'i-heroicons-arrow-path', color: '#10B981' },
+      { name: 'SSH & Server Provisioning', icon: 'i-heroicons-key', color: '#F59E0B' },
       { name: 'Docker', icon: 'i-simple-icons-docker', color: '#2496ED' },
-      { name: 'Postman', icon: 'i-simple-icons-postman', color: '#FF6C37' },
-      { name: 'PhpStorm', icon: 'i-simple-icons-phpstorm', color: '#B07AEB' },
-      { name: 'Visual Studio Code', icon: 'i-simple-icons-visualstudiocode', color: '#007ACC' },
-      { name: 'Laragon', icon: 'i-heroicons-server', color: '#38BDF8' }
+      { name: 'Git & GitHub', icon: 'i-simple-icons-github', color: '#F0F6FC' },
+      { name: 'Postman', icon: 'i-simple-icons-postman', color: '#FF6C37' }
     ]
   }
 ]

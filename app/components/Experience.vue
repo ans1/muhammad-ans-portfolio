@@ -1,37 +1,44 @@
 <script setup lang="ts">
 const experiences = [
   {
+    title: 'Independent Full-Stack Developer (Contract)',
+    company: 'Independent — Remote',
+    date: 'Feb 2024 - Present',
+    description: 'Delivering end-to-end Laravel and Vue/Nuxt systems for clients on contract. Led a five-person team building a collaborative web GIS platform, worked across the HR and finance modules of a multi-tenant back-office platform and co-led its ground-up rewrite onto Vue 3, and independently designed and built Safareva, a multi-vertical travel marketplace.',
+    technologies: ['Laravel', 'Nuxt 4', 'Vue 3', 'Inertia.js', 'Team Lead']
+  },
+  {
     title: 'Senior Full-Stack Developer',
-    company: 'CrewLogix',
-    date: '2023',
+    company: 'Crewlogix Technologies',
+    date: 'Jan 2023 - Feb 2024',
     description: 'Led end-to-end full-stack delivery of Laravel applications, designing and maintaining REST APIs consumed by web and mobile clients. Built user-facing features with Nuxt.js/Vue.js, keeping releases stable through task planning, code reviews, and team mentoring.',
     technologies: ['Laravel', 'Nuxt.js', 'Vue.js', 'REST APIs']
   },
   {
     title: 'Senior Full-Stack Developer',
-    company: 'TechNation (Abu Dhabi)',
-    date: '2020 - 2023',
+    company: 'TechNation',
+    date: 'Feb 2020 - Feb 2023',
     description: 'Built and maintained Laravel web services and core business logic for multiple client-facing applications. Delivered responsive front-ends with Nuxt.js/Vue.js, collaborating directly with stakeholders from requirements through production release.',
     technologies: ['Laravel', 'Nuxt.js', 'Vue.js', 'MySQL']
   },
   {
     title: 'Freelance Full-Stack Developer',
     company: 'Independent',
-    date: '2017 - 2020',
+    date: 'Jun 2017 - Feb 2020',
     description: 'Delivered end-to-end web projects for independent clients, building Laravel back-ends and Vue.js front-ends across e-commerce, service, and content platforms. Managed the full project lifecycle for multiple concurrent client engagements.',
     technologies: ['Laravel', 'Vue.js', 'PHP', 'MySQL']
   },
   {
     title: 'Senior Web Developer',
-    company: 'Favethemes',
-    date: '2015 - 2017',
+    company: 'FaveThemes',
+    date: 'Nov 2015 - Jun 2017',
     description: 'Developed and enhanced ThemeForest real-estate themes (Houzez, Homey) with a focus on WordPress and front-end engineering. Built reusable UI components adopted across multiple premium theme releases.',
     technologies: ['WordPress', 'PHP', 'JavaScript', 'SCSS']
   },
   {
     title: 'Web Developer',
-    company: 'Emenac Travel',
-    date: '2014 - 2015',
+    company: 'Emenac Inc.',
+    date: 'Jun 2014 - Aug 2015',
     description: 'Implemented custom CMS features and e-booking flows using PHP, MySQL, and JavaScript. Maintained and enhanced travel websites with a focus on reliability and performance.',
     technologies: ['PHP', 'MySQL', 'JavaScript']
   }

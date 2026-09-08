@@ -18,7 +18,7 @@ const resumeUrl = '/resume/muhammad-ans-resume.pdf'
               Available for hire
             </UBadge>
             <UBadge variant="soft" color="primary" size="lg" icon="i-heroicons-sparkles" class="rounded-full">
-              1+ yr Vibe Coding
+              Production AI Integration
             </UBadge>
           </div>
           
@@ -29,10 +29,12 @@ const resumeUrl = '/resume/muhammad-ans-resume.pdf'
           </h1>
           
           <p class="text-xl text-gray-500 dark:text-gray-400 max-w-2xl leading-relaxed">
-            I build exceptional digital experiences with 6+ years of expertise in 
-            <span class="text-gray-900 dark:text-gray-200 font-semibold">Laravel</span>, 
-            <span class="text-gray-900 dark:text-gray-200 font-semibold">Nuxt</span>, and 
-            <span class="text-gray-900 dark:text-gray-200 font-semibold">Modern Web Technologies</span>.
+            I build production web applications — 10+ years across
+            <span class="text-gray-900 dark:text-gray-200 font-semibold">Laravel</span>,
+            <span class="text-gray-900 dark:text-gray-200 font-semibold">Nuxt</span>
+            and modern web tooling — and I ship
+            <span class="text-gray-900 dark:text-gray-200 font-semibold">production AI features</span>:
+            natural-language search, structured extraction and embedding-backed retrieval.
           </p>
 
           <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-4">
@@ -110,13 +112,20 @@ const resumeUrl = '/resume/muhammad-ans-resume.pdf'
                   </div>
                   <div class="pl-4">
                     <span class="text-gray-400">experience:</span>
-                    <span class="text-orange-500 ml-2">6</span>,
+                    <span class="text-orange-500 ml-2">10</span>,
                   </div>
                   <div class="pl-4">
                     <span class="text-gray-400">stack:</span>
                     <span class="text-gray-400">[</span>
                     <span class="text-green-500">'Laravel'</span>,
                     <span class="text-green-500">'Nuxt'</span>
+                    <span class="text-gray-400">]</span>,
+                  </div>
+                  <div class="pl-4">
+                    <span class="text-gray-400">ai:</span>
+                    <span class="text-gray-400">[</span>
+                    <span class="text-green-500">'Gemini'</span>,
+                    <span class="text-green-500">'pgvector'</span>
                     <span class="text-gray-400">]</span>
                   </div>
                   <div class="text-gray-400">}</div>
