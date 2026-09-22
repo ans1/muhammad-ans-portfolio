@@ -40,6 +40,7 @@ const skillCategories = [
       { name: 'Groq', icon: 'i-heroicons-bolt', color: '#F55036' },
       { name: 'Structured / JSON-Schema Output', icon: 'i-heroicons-code-bracket-square', color: '#38BDF8' },
       { name: 'Embeddings & pgvector Search', icon: 'i-heroicons-magnifying-glass-circle', color: '#10B981' },
+      { name: 'Vision / Image Moderation', icon: 'i-heroicons-eye', color: '#10B981' },
       { name: 'Prompt Design & Injection Hardening', icon: 'i-heroicons-shield-check', color: '#A78BFA' },
       { name: 'AI Cost Control & Failover', icon: 'i-heroicons-currency-dollar', color: '#F59E0B' },
       { name: 'AI-Assisted Development', icon: 'i-heroicons-cpu-chip', color: '#D97757' }

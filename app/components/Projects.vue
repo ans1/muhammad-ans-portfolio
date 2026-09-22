@@ -8,8 +8,8 @@ const projects = [
     title: 'Safareva',
     role: 'Solo — product, design & full stack',
     period: '2026 — present',
-    description: 'A multi-vertical travel package marketplace where agencies list packages and travellers browse and enquire. Built the full stack — Laravel REST API, admin panel, and a Nuxt 4 / Nuxt UI v4 front-end — architected around dynamic service types (Pilgrimage, Holidays, and more), each with its own theme and navigation. Built two production AI features end-to-end on the Laravel AI SDK (Gemini with Groq failover): a natural-language "vibe search" that turns free-text queries like "7-day Umrah in Ramadan for a family" into structured catalogue filters, using pgvector cosine similarity over taxonomy embeddings so prompt size stays flat as the catalogue grows; and an AI package builder that extracts structured package data from pasted supplier text or generates a draft from a short brief, applied transactionally with server-side name resolution and per-field confidence reporting. Hardened the prompts to treat supplier text as untrusted data, and bounded AI spend with caching, rate limiting and graceful degradation to keyword search. Owned this one solo end-to-end: market research, complete UX/UI design, and the full implementation — no dedicated designer involved.',
-    tags: ['Laravel', 'Nuxt 4', 'Laravel AI SDK', 'Gemini', 'pgvector', 'Solo Build'],
+    description: 'A multi-vertical travel package marketplace where agencies list packages and travellers browse and enquire. Built the full stack — Laravel REST API, admin panel, and a Nuxt 4 / Nuxt UI v4 front-end — architected around dynamic service types (Pilgrimage, Holidays, and more), each with its own theme and navigation. Built three production AI features end-to-end on the Laravel AI SDK (Gemini with Groq failover): a natural-language "vibe search" that turns free-text queries like "7-day Umrah in Ramadan for a family" into structured catalogue filters, using pgvector cosine similarity over taxonomy embeddings so prompt size stays flat as the catalogue grows; an AI package builder that extracts structured package data from pasted supplier text or generates a draft from a short brief, applied transactionally with server-side name resolution and per-field confidence reporting; and an image gate where one vision call per upload decides both whether a photo is safe to publish and which vertical it actually depicts, so a beach photo cannot be attached to a pilgrimage package — checked against the live service-type list, so adding a vertical needs no prompt change. Hardened the prompts to treat supplier text and text inside images as untrusted evidence rather than instructions, and bounded AI spend with caching, rate limiting, per-agent timeouts (the SDK only fails over on HTTP errors, not on a stalled provider) and graceful degradation to keyword search. Owned this one solo end-to-end: market research, complete UX/UI design, and the full implementation — no dedicated designer involved.',
+    tags: ['Laravel', 'Nuxt 4', 'Laravel AI SDK', 'Gemini & Groq', 'Vision AI', 'pgvector', 'Solo Build'],
     image: 'bg-gradient-to-br from-blue-500 to-cyan-500',
     images: [
       asset('/images/projects/safareva/01-homepage.png'),
@@ -26,6 +26,26 @@ const projects = [
       '', '', '', '', ''
     ],
     links: { demo: 'https://safareva.com/', repo: '' }
+  },
+  {
+    title: 'UQU Journals System',
+    role: 'Full-stack developer',
+    period: '2023 — 2024',
+    description: 'A full-stack journal article publishing tool for Umm Al-Qura University. Built the Laravel API that parses uploaded Word documents (PHPWord/Pandoc) into structured sections and compiles content into PDFs via a custom LaTeX pipeline, plus the Vue 3 / CKEditor front-end with Arabic/English RTL support.',
+    tags: ['Laravel', 'Vue 3', 'CKEditor 5', 'LaTeX', 'i18n (AR/EN)'],
+    image: 'bg-gradient-to-br from-emerald-500 to-teal-500',
+    images: [],
+    links: { demo: 'https://production.uqujournalsys.org/', repo: '' }
+  },
+  {
+    title: 'Agilestsol',
+    role: 'Client project — design & full-stack build',
+    period: '2026',
+    description: 'A marketing and case-study site for a software studio, designed and built end to end. Every page — the home page included — is a content record rendered by one catch-all route against a template registry, so the site is already shaped like a CMS: replacing the placeholder data layer with a Laravel API happens behind a single composable, with nothing in the UI changing. Built on Nuxt 4 and Tailwind CSS v4 with the entire visual system in one design-token file, and prerendered to static HTML at build time so there is no runtime server to keep alive — the only server code is the contact endpoint, validated by a Zod schema shared by the client and the server. Scroll reveal, per-page SEO metadata and the sitemap are wired once and apply to every page automatically.',
+    tags: ['Nuxt 4', 'Tailwind v4', 'Static SSR', 'TypeScript', 'Zod', 'CMS-ready'],
+    image: 'bg-gradient-to-br from-indigo-500 to-violet-600',
+    images: [],
+    links: { demo: 'https://dev.agilestsol.com/', repo: '' }
   },
   {
     title: 'GIS Cloud',
@@ -48,16 +68,6 @@ const projects = [
     images: [],
     liveRestricted: true,
     links: { demo: '', repo: '' }
-  },
-  {
-    title: 'UQU Journals System',
-    role: 'Full-stack developer',
-    period: '2023 — 2024',
-    description: 'A full-stack journal article publishing tool for Umm Al-Qura University. Built the Laravel API that parses uploaded Word documents (PHPWord/Pandoc) into structured sections and compiles content into PDFs via a custom LaTeX pipeline, plus the Vue 3 / CKEditor front-end with Arabic/English RTL support.',
-    tags: ['Laravel', 'Vue 3', 'CKEditor 5', 'LaTeX', 'i18n (AR/EN)'],
-    image: 'bg-gradient-to-br from-emerald-500 to-teal-500',
-    images: [],
-    links: { demo: 'https://production.uqujournalsys.org/', repo: '' }
   },
   {
     title: 'Kargenic',
@@ -164,9 +174,9 @@ function openProject(project: (typeof projects)[number]) {
               <div class="flex items-center gap-3 mt-auto">
                 <UButton
                   :icon="project.images.length ? 'i-heroicons-photo' : 'i-heroicons-document-text'"
-                  size="sm"
+                  size="md"
                   variant="soft"
-                  class="rounded-full"
+                  class="rounded-full min-h-11"
                   @click="openProject(project)"
                 >
                   {{ project.images.length ? 'View Gallery' : 'View Details' }}
@@ -174,9 +184,9 @@ function openProject(project: (typeof projects)[number]) {
                 <UButton
                   v-if="project.links.demo"
                   icon="i-heroicons-eye"
-                  size="sm"
+                  size="md"
                   variant="soft"
-                  class="rounded-full"
+                  class="rounded-full min-h-11"
                   :to="project.links.demo"
                   target="_blank"
                 >
@@ -185,10 +195,10 @@ function openProject(project: (typeof projects)[number]) {
                 <UButton
                   v-if="project.links.repo"
                   icon="i-simple-icons-github"
-                  size="sm"
+                  size="md"
                   variant="ghost"
                   color="gray"
-                  class="rounded-full"
+                  class="rounded-full min-h-11"
                   :to="project.links.repo"
                   target="_blank"
                 >

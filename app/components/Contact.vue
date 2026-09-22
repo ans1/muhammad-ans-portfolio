@@ -54,7 +54,7 @@ const socialLinks = [
                 <a
                   v-if="method.href"
                   :href="method.href"
-                  class="font-semibold hover:text-primary-500 transition-colors break-all"
+                  class="inline-flex items-center justify-center min-h-11 font-semibold hover:text-primary-500 transition-colors break-all"
                 >
                   {{ method.value }}
                 </a>
@@ -69,7 +69,7 @@ const socialLinks = [
             size="xl"
             to="mailto:ans2003@gmail.com"
             icon="i-heroicons-envelope"
-            class="rounded-full"
+            class="rounded-full min-h-11"
           >
             Email Me
           </UButton>
@@ -83,7 +83,7 @@ const socialLinks = [
               target="_blank"
               variant="soft"
               size="lg"
-              class="rounded-full hover:-translate-y-0.5 transition-transform"
+              class="rounded-full min-h-11 min-w-11 justify-center hover:-translate-y-0.5 transition-transform"
               :aria-label="social.label"
             />
           </div>

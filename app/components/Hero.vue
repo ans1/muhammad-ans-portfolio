@@ -44,7 +44,7 @@ const resumeUrl = '/resume/muhammad-ans-resume.pdf'
               size="xl"
               to="#projects"
               icon="i-heroicons-briefcase"
-              class="rounded-full"
+              class="rounded-full min-h-11"
             >
               View Projects
             </UButton>
@@ -54,7 +54,7 @@ const resumeUrl = '/resume/muhammad-ans-resume.pdf'
               variant="soft"
               to="#contact"
               icon="i-heroicons-chat-bubble-bottom-center-text"
-              class="rounded-full"
+              class="rounded-full min-h-11"
             >
               Contact Me
             </UButton>
@@ -66,7 +66,7 @@ const resumeUrl = '/resume/muhammad-ans-resume.pdf'
               :to="resumeUrl"
               target="_blank"
               icon="i-heroicons-arrow-down-tray"
-              class="rounded-full"
+              class="rounded-full min-h-11"
             >
               Resume
             </UButton>
@@ -82,7 +82,7 @@ const resumeUrl = '/resume/muhammad-ans-resume.pdf'
               variant="ghost"
               color="gray"
               size="lg"
-              class="rounded-full"
+              class="rounded-full min-h-11 min-w-11 justify-center"
               :aria-label="social.label"
             />
           </div>

@@ -4,7 +4,7 @@ const experiences = [
     title: 'Independent Full-Stack Developer (Contract)',
     company: 'Independent — Remote',
     date: 'Feb 2024 - Present',
-    description: 'Delivering end-to-end Laravel and Vue/Nuxt systems for clients on contract. Led a five-person team building a collaborative web GIS platform, worked across the HR and finance modules of a multi-tenant back-office platform and co-led its ground-up rewrite onto Vue 3, and independently designed and built Safareva, a multi-vertical travel marketplace.',
+    description: 'Delivering end-to-end Laravel and Vue/Nuxt systems for clients on contract. Led a five-person team building a collaborative web GIS platform, worked across the HR and finance modules of a multi-tenant back-office platform and co-led its ground-up rewrite onto Vue 3, designed and built Agilestsol — a CMS-shaped, statically prerendered Nuxt 4 studio site — and independently designed and built Safareva, a multi-vertical travel marketplace.',
     technologies: ['Laravel', 'Nuxt 4', 'Vue 3', 'Inertia.js', 'Team Lead']
   },
   {

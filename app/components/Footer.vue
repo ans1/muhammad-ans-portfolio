@@ -19,7 +19,7 @@ const links = [
     <UContainer class="py-12">
       <div v-reveal="{ y: 8, delay: 120 }" class="grid md:grid-cols-3 gap-8 items-center">
         <div class="text-center md:text-left">
-          <NuxtLink to="/" class="text-xl font-bold font-mono mb-2 inline-block">
+          <NuxtLink to="/" class="inline-flex items-center min-h-11 text-xl font-bold font-mono mb-2">
             &lt;M.Ans /&gt;
           </NuxtLink>
           <p class="text-sm text-gray-500 dark:text-gray-400">
@@ -32,7 +32,7 @@ const links = [
             v-for="link in links"
             :key="link.label"
             :to="link.to"
-            class="text-sm text-gray-600 hover:text-primary-500 dark:text-gray-300 dark:hover:text-primary-400 transition-colors"
+            class="inline-flex items-center min-h-11 text-sm text-gray-600 hover:text-primary-500 dark:text-gray-300 dark:hover:text-primary-400 transition-colors"
           >
             {{ link.label }}
           </NuxtLink>
@@ -47,7 +47,7 @@ const links = [
             target="_blank"
             variant="ghost"
             color="gray"
-            class="rounded-full"
+            class="rounded-full min-h-11 min-w-11 justify-center"
             :aria-label="social.label"
           />
         </div>
